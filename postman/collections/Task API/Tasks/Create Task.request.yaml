@@ -1,0 +1,13 @@
+$kind: http-request
+name: Create Task
+url: "{{baseUrl}}/tasks"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "title": "HTTP Status Test",
+        "description": "Testing 201 Created",
+        "completed": false
+    }
+order: 1785983092696

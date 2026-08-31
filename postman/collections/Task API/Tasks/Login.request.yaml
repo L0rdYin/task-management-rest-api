@@ -1,0 +1,5 @@
+$kind: http-request
+name: Login
+url: http://localhost:8080/auth/login
+method: POST
+order: 4155562174285950

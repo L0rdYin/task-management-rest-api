@@ -1,0 +1,13 @@
+$kind: http-request
+name: Edit Tasks
+url: "{{baseUrl}}/tasks/11"
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+        "title": "DTO Test Task Updated",
+        "description": "We successfully updated this task using DTOs",
+        "completed": true
+    }
+order: 3926222471561349

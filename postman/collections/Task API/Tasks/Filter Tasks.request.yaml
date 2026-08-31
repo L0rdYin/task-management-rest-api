@@ -1,0 +1,7 @@
+$kind: http-request
+name: Filter Tasks
+url: "{{baseUrl}}/tasks?completed=true"
+method: GET
+queryParams:
+  completed: "true"
+order: 3201902622516942

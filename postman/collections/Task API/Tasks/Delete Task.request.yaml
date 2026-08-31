@@ -1,0 +1,5 @@
+$kind: http-request
+name: Delete Task
+url: "{{baseUrl}}/tasks/13"
+method: DELETE
+order: 3940944570712486

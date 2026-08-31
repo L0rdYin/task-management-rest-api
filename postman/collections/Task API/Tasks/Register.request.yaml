@@ -1,0 +1,12 @@
+$kind: http-request
+name: Register
+url: http://localhost:8080/auth/register
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "username": "testuser",
+        "password": "password123"
+    }
+order: 4030348379755636

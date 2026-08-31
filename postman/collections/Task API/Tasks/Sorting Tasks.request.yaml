@@ -1,0 +1,10 @@
+$kind: http-request
+name: Sorting Tasks
+url: "{{baseUrl}}/tasks?completed=true&page=0&size=3&sort=createdAt,desc"
+method: GET
+queryParams:
+  completed: "true"
+  page: "0"
+  size: "3"
+  sort: createdAt,desc
+order: 3656921377781820
