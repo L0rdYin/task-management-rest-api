@@ -90,7 +90,9 @@ The `GET /tasks` endpoint supports pagination, sorting, and filtering.
 
 
 #### Pagination
+```http
 GET /tasks?page=0&size=10
+```
 
 #### Sorting
 
@@ -275,7 +277,8 @@ Make sure the following are installed:
 - MySQL
 
 ### Clone the repository
-git clone <repository-url>
+git clone https://github.com/L0rdYin/task-management-rest-api.git
+cd task-management-rest-api
 
 Navigate into the project:
 cd demo
@@ -303,6 +306,58 @@ Using the Maven wrapper: ./mvnw spring-boot:run
 
 The API will be available at:
 http://localhost:8080
+
+## Docker
+
+The application can be run using Docker and Docker Compose.
+
+Docker Compose runs two containers:
+
+- `task-api` — Spring Boot application
+- `task-db` — MySQL database
+
+The containers communicate through the Docker Compose network.
+
+### Docker Architecture
+
+```text
+Client / Postman
+       |
+       v
+   task-api
+  Spring Boot
+       |
+       v
+    task-db
+     MySQL
+```
+## Build Docker Image
+
+build application
+``` 
+./mvnw clean package -DskipTests
+```
+
+build image
+```
+docker build -t task-api 
+```
+## Run Docker Compose
+
+Start application & database
+```
+docker compose up --build
+```
+
+Stop containers
+```
+docker compose down
+```
+
+Stop containers & remove database volume
+```
+docker compose down -v
+```
 
 ## Example Authentication Workflow
 A typical workflow for using the API is:
@@ -352,6 +407,8 @@ POST /tasks
     "completed": false
 }
 ```
+
+
 
 ## API Testing
 
